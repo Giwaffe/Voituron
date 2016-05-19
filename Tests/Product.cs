@@ -14,7 +14,7 @@ namespace Tests
             clsGWaySnelStart test = new clsGWaySnelStart();
             //clsGWayLoginSettings testLogin = new clsGWayLoginSettings();
             test.Login("jan@e-force.nl", "E-F@ict16!", true);
-            test.mtdGWayAdmiOpenen("C:\\SnelStart\\Administraties", "Voorbeeldbedrijf");
+            test.mtdGWayAdmiOpenen("D:\\SnelStart\\Administraties", "Voorbeeldbedrijf");
             //test.mtdGWayAdmiOpenenViaLoginSettings(0, testLogin);
         }
 

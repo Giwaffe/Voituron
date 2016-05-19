@@ -16,7 +16,7 @@ namespace Voituron_Framework
 
             clsGWaySnelStart test = new clsGWaySnelStart();
             test.Login("jan@e-force.nl", "E-F@ict16!", true);
-            test.mtdGWayAdmiOpenen("C:\\SnelStart\\Administraties", "Voorbeeldbedrijf");
+            test.mtdGWayAdmiOpenen("D:\\SnelStart\\Administraties", "Voorbeeldbedrijf");
 
             return order;
         }
