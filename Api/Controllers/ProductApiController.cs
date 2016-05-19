@@ -20,7 +20,7 @@ namespace Api.Controllers
         }
 
         // GET api/values/5
-        public ProductSnelStart Get(long id)
+        public ProductSnelStart Get(string id)
         {
 
             Assembly.Load("SnelStartGatewayInterface");

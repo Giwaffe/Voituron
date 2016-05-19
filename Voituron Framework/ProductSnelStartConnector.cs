@@ -9,16 +9,20 @@ namespace Voituron_Framework
 {
     public static class ProductSnelStartConnector
     {
-
-        public static ProductSnelStart Get(string Id)
+        public static void Connect()
         {
-            var product = new ProductSnelStart();            
-
             clsGWaySnelStart test = new clsGWaySnelStart();
             //var z = test.prpGWayLoginSettingsGet;
             //test.mtdGWayAdmiOpenenViaLoginSettings(0, z);
             test.Login("jan@e-force.nl", "E-F@ict16!", true);
             test.mtdGWayAdmiOpenen("D:\\SnelStart\\Administraties", "Voorbeeldbedrijf");
+        }
+
+        public static ProductSnelStart Get(string Id)
+        {
+            Connect();
+
+            var product = new ProductSnelStart();            
 
             clsGWArtikel testProduct = new clsGWArtikel();
 
@@ -45,6 +49,39 @@ namespace Voituron_Framework
             product.vfVoorraadVrij = testProduct.prpVoorraadVrijGet;
 
             return product;
+        }
+        public static List<ProductSnelStart> GetList()
+        {
+            Connect();
+            List<ProductSnelStart> products = new List<ProductSnelStart>();
+            clsGWArtikel product = new clsGWArtikel();
+            var x = 0;
+            while (product.mtdGWayArtikelReadNext() == true && x <= 19)
+            {
+                var listproduct = new ProductSnelStart();
+                listproduct.vfArtikelcode = product.prpArtikelcodeGet;                          // Id of the Product
+                listproduct.vfOmschrijving = product.prpOmschrijvingGet;                        // Name of the Product
+                listproduct.vfVerkoopPrijs = product.prpVerkoopprijsGet;                        // Price of the Product
+                listproduct.vfAutomatischePrijs = product.prpAutomatischePrijsGet;
+                listproduct.vfArtikelKortinggroepID = product.prpArtikelKortinggroepIDGet;      // Discountgroup of the Product
+                listproduct.vfMaxKortingsPercentage = product.prpMaxKortingsPercentageGet;      // MaxDiscount of the Product
+                listproduct.vfVoorraad = product.prpVoorraadTechnischGet;                       // Quantity in Storage
+                listproduct.vfArtikelOmzetgroep = product.prpArtikelOmzetgroepIDGet;
+                listproduct.vfBestelEenheid = product.prpBestelEenheidGet;
+                listproduct.vfEenheid = product.prpEenheidGet;
+                listproduct.vfInkoopPrijs = product.prpInkoopprijsGet;
+                listproduct.vfLeverancierID = product.prpLeverancierIDGet;
+                listproduct.vfMaxKortingsPercentageGebruiken = product.prpMaxKortingsPercentageGebruikenGet;
+                listproduct.vfMinimaalBestelAantal = product.prpMinimaalBestelAantalGet;
+                listproduct.vfMinimumVoorraad = product.prpMinimumVoorraadGet;
+                listproduct.vfNonActief = product.prpNonActiefGet;
+                listproduct.vfVoorraadControle = product.prpVoorraadControleGet;
+                listproduct.vfVoorraadGewenst = product.prpVoorraadGewenstGet;
+                listproduct.vfVoorraadVrij = product.prpVoorraadVrijGet;
+                products.Add(listproduct);
+                x++;
+            }
+            return products;
         }
     }
 }
