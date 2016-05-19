@@ -12,8 +12,6 @@ namespace Voituron_Framework
         public static void Connect()
         {
             clsGWaySnelStart test = new clsGWaySnelStart();
-            //var z = test.prpGWayLoginSettingsGet;
-            //test.mtdGWayAdmiOpenenViaLoginSettings(0, z);
             test.Login("jan@e-force.nl", "E-F@ict16!", true);
             test.mtdGWayAdmiOpenen("D:\\SnelStart\\Administraties", "Voorbeeldbedrijf");
         }
@@ -50,7 +48,7 @@ namespace Voituron_Framework
 
             return product;
         }
-        public static List<ProductSnelStart> GetList()
+        public static List<ProductSnelStart> ListProductsGet()
         {
             Connect();
             List<ProductSnelStart> products = new List<ProductSnelStart>();

@@ -9,13 +9,17 @@ namespace Voituron_Framework
 {
     public static class CustomerSnelStartConnector
     {
-        public static CustomerSnelStart Get(int Id)
+        public static void Connect()
         {
-            var Customer = new CustomerSnelStart();
-
             clsGWaySnelStart test = new clsGWaySnelStart();
             test.Login("jan@e-force.nl", "E-F@ict16!", true);
             test.mtdGWayAdmiOpenen("D:\\SnelStart\\Administraties", "Voorbeeldbedrijf");
+        }
+        public static CustomerSnelStart Get(int Id)
+        {
+            Connect();
+        
+            var Customer = new CustomerSnelStart();
 
             clsGWKlant testCustomer = new clsGWKlant();
 
@@ -72,6 +76,68 @@ namespace Voituron_Framework
             Customer.vfWebSiteUrl = testCustomer.prpWebSiteUrl;
 
             return Customer;
+        }
+        public static List<CustomerSnelStart> ListCustomersGet()
+        {
+            Connect();
+            List<CustomerSnelStart> customers = new List<CustomerSnelStart>();
+            clsGWKlant customer = new clsGWKlant();
+            var x = 0;
+            while(customer.mtdGWayKlantReadNext() == true && x <= 19)
+            {
+                var listCustomer = new CustomerSnelStart();
+                listCustomer.vfRelatieCode = customer.prpRelatieCode;
+                listCustomer.vfNaam = customer.prpNaam;
+                listCustomer.vfEmail = customer.prpEmail;
+                listCustomer.vfIban = customer.prpIban;
+                listCustomer.vfCreditCardNummer2 = customer.prpCreditCardNummer2;
+                listCustomer.vfTelefoon = customer.prpTelefoon;
+                listCustomer.vfTelefoonMobiel = customer.prpTelefoonMobiel;
+                listCustomer.vfMemo = customer.prpMemo;
+                listCustomer.vfBic = customer.prpBic;
+                listCustomer.vfBtwNummer = customer.prpBtwNummer;
+                listCustomer.vfAanmanen = customer.prpAanmanen;
+                listCustomer.vfAanmaningEmailen = customer.prpAanmaningEmailen;
+                listCustomer.vfAanmaningEmailAdres = customer.prpAanmaningEmailAdres;
+                listCustomer.vfAanmaningCcEmailAdres = customer.prpAanmaningCcEmailAdres;
+                listCustomer.vfBevestigingEmailen = customer.prpBevestigingEmailen;
+                listCustomer.vfBevestigingEmailAdres = customer.prpBevestigingEmailAdres;
+                listCustomer.vfBevestigingCcEmailAdres = customer.prpBevestigingCcEmailAdres;
+                listCustomer.vfCorrespondentieAdres = customer.prpCorrespondentieAdres;
+                listCustomer.vfCorrespondentieAdresContactPersoon = customer.prpCorrespondentieAdresContactpersoon;
+                listCustomer.vfCorrespondentieAdresAfwijkend = customer.prpCorrespondentieAdresAfwijkend;
+                listCustomer.vfCorrespondentieAdresLandID = customer.prpCorrespondentieAdresLandID;
+                listCustomer.vfCorrespondentieAdresPlaats = customer.prpCorrespondentieAdresPlaats;
+                listCustomer.vfCorrespondentieAdresPostCode = customer.prpCorrespondentieAdresPostcode;
+                listCustomer.vfElektronischFactureren = customer.prpElektronischFactureren;
+                listCustomer.vfFax = customer.prpFax;
+                listCustomer.vfFactuurEmailAdres = customer.prpFactuurEmailAdres;
+                listCustomer.vfFactuurCcEmailAdres = customer.prpFactuurCcEmailAdres;
+                listCustomer.vfFactuurKorting = customer.prpFactuurKorting;
+                listCustomer.vfIncasseren = customer.prpIncasseren;
+                listCustomer.vfKredietLimiet = customer.prpKredietLimiet;
+                listCustomer.vfKredietTermijn = customer.prpKrediettermijn;
+                listCustomer.vfKvkNummer = customer.prpKvkNummer;
+                listCustomer.vfNonActiefGet = customer.prpNonActiefGet;
+                listCustomer.vfOfferteEmailen = customer.prpOfferteEmailen;
+                listCustomer.vfOfferteEmailAdres = customer.prpOfferteEmailAdres;
+                listCustomer.vfOfferteCcEmailAdres = customer.prpOfferteCcEmailAdres;
+                listCustomer.vfOpenstaandSaldo = customer.prpOpenstaandSaldo;
+                listCustomer.vfRekeningnummerBank2 = customer.prpRekeningnummerBank2;
+                listCustomer.vfRekeningnummerNaamHouder = customer.prpRekeningnummerNaamHouder;
+                listCustomer.vfRekeningnummerPlaatsHouder = customer.prpRekeningnummerPlaatsHouder;
+                listCustomer.vfRelatieCodeFactuurNaar = customer.prpRelatieCodeFactuurNaar;
+                listCustomer.vfUblBestandAlsBijlage = customer.prpUblBestandAlsBijlage;
+                listCustomer.vfVestigingAdres = customer.prpVestigingAdres;
+                listCustomer.vfVestigingAdresContactPersoon = customer.prpVestigingAdresContactpersoon;
+                listCustomer.vfVestigingAdresLandID = customer.prpVestigingAdresLandID;
+                listCustomer.vfVestigingAdresPlaats = customer.prpVestigingAdresPlaats;
+                listCustomer.vfVestigingAdresPostcode = customer.prpVestigingAdresPostcode;
+                listCustomer.vfWebSiteUrl = customer.prpWebSiteUrl;
+                customers.Add(listCustomer);
+                x++;
+            }
+            return customers;
         }
     }
 }

@@ -64,8 +64,9 @@ namespace Tests
         [TestMethod]
         public void Get_ProductList()
         {
-            var obj = Voituron_Framework.ProductSnelStartConnector.GetList();
+            var obj = Voituron_Framework.ProductSnelStartConnector.ListProductsGet();
             var x = obj.Count;
+
             Assert.AreEqual(20, x);
         }
     }
