@@ -74,6 +74,8 @@
   <ItemGroup>
     <Compile Include="CustomerSnelStart.cs" />
     <Compile Include="CustomerSnelStartConnector.cs" />
+    <Compile Include="OrderSnelStart.cs" />
+    <Compile Include="OrderSnelStartConnector.cs" />
     <Compile Include="ProductSnelStart.cs" />
     <Compile Include="ProductSnelStartConnector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

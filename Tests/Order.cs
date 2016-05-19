@@ -17,6 +17,15 @@ namespace Tests
         }
 
         [TestMethod]
+        public void ConnectorRead_Order()
+        {
+            var obj = Voituron_Framework.OrderSnelStartConnector.Get(10031);
+
+            Assert.AreEqual(true, true);
+        }
+
+
+        [TestMethod]
         public void Create_An_Order()
         {
             Connect();            
