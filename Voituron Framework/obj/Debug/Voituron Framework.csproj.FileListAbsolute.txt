@@ -292,3 +292,5 @@ C:\Users\Jordi\Documents\GitHub\Voituron\Voituron Framework\bin\Debug\ssnSoapCom
 C:\Users\Jordi\Documents\GitHub\Voituron\Voituron Framework\obj\Debug\Voituron Framework.csprojResolveAssemblyReference.cache
 C:\Users\Jordi\Documents\GitHub\Voituron\Voituron Framework\obj\Debug\Voituron Framework.dll
 C:\Users\Jordi\Documents\GitHub\Voituron\Voituron Framework\obj\Debug\Voituron Framework.pdb
+C:\Users\Jordi\Documents\GitHub\Voituron\Voituron Framework\obj\Debug\Interop.SnelStartGateWay.dll
+C:\Users\Jordi\Documents\GitHub\Voituron\Voituron Framework\obj\Debug\Voituron Framework.csproj.ResolveComReference.cache

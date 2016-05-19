@@ -426,3 +426,5 @@ C:\Users\Jordi\Documents\GitHub\Voituron\Api\bin\ssnSoapCommunicatie.XmlSerializ
 C:\Users\Jordi\Documents\GitHub\Voituron\Api\obj\Debug\Api.csprojResolveAssemblyReference.cache
 C:\Users\Jordi\Documents\GitHub\Voituron\Api\obj\Debug\Api.dll
 C:\Users\Jordi\Documents\GitHub\Voituron\Api\obj\Debug\Api.pdb
+C:\Users\Jordi\Documents\GitHub\Voituron\Api\obj\Debug\Interop.SnelStartGateWay.dll
+C:\Users\Jordi\Documents\GitHub\Voituron\Api\obj\Debug\Api.csproj.ResolveComReference.cache

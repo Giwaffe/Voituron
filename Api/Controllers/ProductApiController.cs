@@ -1,8 +1,10 @@
-﻿using System;
+﻿using SnelStartGatewayInterface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Reflection;
 using System.Web.Http;
 using Voituron_Framework;
 
@@ -20,6 +22,16 @@ namespace Api.Controllers
         // GET api/values/5
         public ProductSnelStart Get(long id)
         {
+
+            Assembly.Load("SnelStartGatewayInterface");
+
+            clsGWaySnelStart test = new clsGWaySnelStart();
+            //var z = test.prpGWayLoginSettingsGet;
+            //test.mtdGWayAdmiOpenenViaLoginSettings(0, z);
+            test.Login("jan@e-force.nl", "E-F@ict16!", true);
+            test.mtdGWayAdmiOpenen("C:\\SnelStart\\Administraties", "Voorbeeldbedrijf");
+
+
             ProductSnelStart obj = ProductSnelStartConnector.Get(id);
             return obj;
         }

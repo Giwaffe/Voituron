@@ -51,11 +51,11 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="SnelStartGatewayInterface, Version=12.17.0.5, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SnelStart\V1200\SnelStartGatewayInterface.dll</HintPath>
+      <HintPath>..\lib\SnelStartGatewayInterface.dll</HintPath>
     </Reference>
     <Reference Include="SnelStartGateWayInternal, Version=12.17.0.5, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SnelStart\V1200\SnelStartGateWayInternal.dll</HintPath>
+      <HintPath>..\lib\SnelStartGateWayInternal.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -298,6 +298,17 @@
       <Name>Voituron Framework</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SnelStartGateWay">
+      <Guid>{63A21693-4122-45B5-96B6-919C78D7EBF5}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>34</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -334,7 +345,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>63219</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:63219/</IISUrl>
+          <IISUrl>http://localhost:63220/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

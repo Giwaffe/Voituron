@@ -158,7 +158,6 @@ C:\Users\Jordi\Documents\GitHub\Voituron\Voituron\Tests\bin\Debug\ssnSoapCommuni
 C:\Users\Jordi\Documents\GitHub\Voituron\Tests\bin\Debug\Tests.dll
 C:\Users\Jordi\Documents\GitHub\Voituron\Tests\bin\Debug\Tests.pdb
 C:\Users\Jordi\Documents\GitHub\Voituron\Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-C:\Users\Jordi\Documents\GitHub\Voituron\Tests\bin\Debug\SnelStartGatewayInterface.dll
 C:\Users\Jordi\Documents\GitHub\Voituron\Tests\bin\Debug\SnelStartGateWayInternal.dll
 C:\Users\Jordi\Documents\GitHub\Voituron\Tests\bin\Debug\CodeArchitects.VBLibrary.dll
 C:\Users\Jordi\Documents\GitHub\Voituron\Tests\bin\Debug\SnelStart.Desktop.Compatibility.Interfaces.dll
@@ -299,3 +298,8 @@ C:\Users\Jordi\Documents\GitHub\Voituron\Tests\bin\Debug\ssnSoapCommunicatie.Xml
 C:\Users\Jordi\Documents\GitHub\Voituron\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
 C:\Users\Jordi\Documents\GitHub\Voituron\Tests\obj\Debug\Tests.dll
 C:\Users\Jordi\Documents\GitHub\Voituron\Tests\obj\Debug\Tests.pdb
+C:\Users\Jordi\Documents\GitHub\Voituron\Tests\bin\Debug\SnelStartGatewayInterface.dll
+C:\Users\Jordi\Documents\GitHub\Voituron\Tests\obj\Debug\Interop.SnelStartGateWay.dll
+C:\Users\Jordi\Documents\GitHub\Voituron\Tests\obj\Debug\Tests.csproj.ResolveComReference.cache
+C:\Users\Jordi\Documents\GitHub\Voituron\Tests\bin\Debug\Voituron Framework.dll
+C:\Users\Jordi\Documents\GitHub\Voituron\Tests\bin\Debug\Voituron Framework.pdb

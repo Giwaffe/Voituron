@@ -27,6 +27,14 @@ namespace Tests
             Assert.AreEqual(true, x);
         }
 
+        [TestMethod]
+        public void ConnectorRead_Product()
+        {
+            var obj = Voituron_Framework.ProductSnelStartConnector.Get(10031);
+
+            Assert.AreEqual(true, true);
+        }
+
         private Boolean ReadProduct()
         {           
              return testProduct.mtdGWayArtikelRead("1");  

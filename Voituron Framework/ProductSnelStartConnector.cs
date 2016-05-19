@@ -15,10 +15,10 @@ namespace Voituron_Framework
             var product = new ProductSnelStart();            
 
             clsGWaySnelStart test = new clsGWaySnelStart();
-            var z = test.prpGWayLoginSettingsGet;
-            test.mtdGWayAdmiOpenenViaLoginSettings(0, z);
-            //test.Login("jan@e-force.nl", "E-F@ict16!", true);
-            //test.mtdGWayAdmiOpenen("C:\\SnelStart\\Administraties", "Voorbeeldbedrijf");
+            //var z = test.prpGWayLoginSettingsGet;
+            //test.mtdGWayAdmiOpenenViaLoginSettings(0, z);
+            test.Login("jan@e-force.nl", "E-F@ict16!", true);
+            test.mtdGWayAdmiOpenen("C:\\SnelStart\\Administraties", "Voorbeeldbedrijf");
 
             clsGWArtikel testProduct = new clsGWArtikel();
 

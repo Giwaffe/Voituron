@@ -40,10 +40,11 @@
   <ItemGroup>
     <Reference Include="SnelStartGatewayInterface, Version=12.17.0.5, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\SnelStartGatewayInterface.dll</HintPath>
+      <HintPath>..\lib\SnelStartGatewayInterface.dll</HintPath>
     </Reference>
-    <Reference Include="SnelStartGateWayInternal">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SnelStart\V1200\SnelStartGateWayInternal.dll</HintPath>
+    <Reference Include="SnelStartGateWayInternal, Version=12.17.0.5, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\SnelStartGateWayInternal.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
@@ -67,8 +68,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="lib\SnelStartGateWay.dll" />
-    <Content Include="lib\SnelStartGatewayInterface.dll" />
+    <COMReference Include="SnelStartGateWay">
+      <Guid>{63A21693-4122-45B5-96B6-919C78D7EBF5}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>34</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Voituron Framework\Voituron Framework.csproj">
+      <Project>{466710f6-0bfe-4d25-8f8d-800d17653713}</Project>
+      <Name>Voituron Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
