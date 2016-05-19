@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace Voituron_Framework
 {
-    public class ProductSnelStart
+    public class CustomerSnelStart
     {
         public long Id { get; set; }
         public string Name { get; set; }
-        public decimal Price { get; set; }
-        public int DiscountGroup { get; set; }
-        public decimal MaxDiscount { get; set; }
-        public decimal AmountInStorage { get; set; }
+        public string EMail { get; set; }
+        public int IBan { get; set; }
+
     }
 }

@@ -12,8 +12,10 @@ namespace Tests
         public void connect()
         {
             clsGWaySnelStart test = new clsGWaySnelStart();
+            //clsGWayLoginSettings testLogin = new clsGWayLoginSettings();
             test.Login("jan@e-force.nl", "E-F@ict16!", true);
             test.mtdGWayAdmiOpenen("C:\\SnelStart\\Administraties", "Voorbeeldbedrijf");
+            //test.mtdGWayAdmiOpenenViaLoginSettings(0, testLogin);
         }
 
         [TestMethod]
@@ -42,8 +44,13 @@ namespace Tests
         private String ReadInfo()
         {
             testProduct.mtdGWayArtikelRead("10031");
-            var x = testProduct.prpOmschrijvingGet;
-            return x;
+            var a = testProduct.prpOmschrijvingGet;                     // name of the product
+            var b = testProduct.prpEenheidGet;                          // quantity of the product
+            var c = testProduct.prpArtikelKortinggroepIDGet;            // discount group
+            var d = testProduct.prpMaxKortingsPercentageGet;            // max discount
+            var e = testProduct.prpVerkoopprijsGet;                     // price of the product
+
+            return a;
         }
 
     }

@@ -35,14 +35,32 @@
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="SnelStartGatewayInterface, Version=12.17.0.5, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\SnelStartGatewayInterface.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\SnelStart\V1200\SnelStartGatewayInterface.dll</HintPath>
     </Reference>
     <Reference Include="SnelStartGateWayInternal, Version=12.17.0.5, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\SnelStartGateWayInternal.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\SnelStart\V1200\SnelStartGateWayInternal.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,6 +72,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerSnelStart.cs" />
+    <Compile Include="CustomerSnelStartConnector.cs" />
     <Compile Include="ProductSnelStart.cs" />
     <Compile Include="ProductSnelStartConnector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,8 +81,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="lib\" />
+    <Content Include="lib\SnelStartGatewayInterface.dll" />
+    <Content Include="lib\SnelStartGateWayInternal.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

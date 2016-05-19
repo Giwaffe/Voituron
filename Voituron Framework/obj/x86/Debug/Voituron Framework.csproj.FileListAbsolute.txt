@@ -1,0 +1,8 @@
+C:\Users\Jordi\Documents\GitHub\Voituron\Voituron Framework\bin\x86\Debug\Voituron Framework.dll.config
+C:\Users\Jordi\Documents\GitHub\Voituron\Voituron Framework\bin\x86\Debug\Voituron Framework.dll
+C:\Users\Jordi\Documents\GitHub\Voituron\Voituron Framework\bin\x86\Debug\Voituron Framework.pdb
+C:\Users\Jordi\Documents\GitHub\Voituron\Voituron Framework\bin\x86\Debug\SnelStartGatewayInterface.dll
+C:\Users\Jordi\Documents\GitHub\Voituron\Voituron Framework\bin\x86\Debug\SnelStartGateWayInternal.dll
+C:\Users\Jordi\Documents\GitHub\Voituron\Voituron Framework\obj\x86\Debug\Voituron Framework.csprojResolveAssemblyReference.cache
+C:\Users\Jordi\Documents\GitHub\Voituron\Voituron Framework\obj\x86\Debug\Voituron Framework.dll
+C:\Users\Jordi\Documents\GitHub\Voituron\Voituron Framework\obj\x86\Debug\Voituron Framework.pdb
