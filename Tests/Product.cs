@@ -30,7 +30,7 @@ namespace Tests
         [TestMethod]
         public void ConnectorRead_Product()
         {
-            var obj = Voituron_Framework.ProductSnelStartConnector.Get(10031);
+            var obj = Voituron_Framework.ProductSnelStartConnector.Get("10031");
 
             Assert.AreEqual(true, true);
         }
