@@ -18,7 +18,7 @@ namespace Api.Controllers
         }
 
         // GET api/values/5
-        public CustomerSnelStart Get(long id)
+        public CustomerSnelStart Get(int id)
         {
             CustomerSnelStart obj = CustomerSnelStartConnector.Get(id);
             return obj;

@@ -12,7 +12,7 @@ namespace Tests
         {
             clsGWaySnelStart test = new clsGWaySnelStart();
             test.Login("jan@e-force.nl", "E-F@ict16!", true);
-            test.mtdGWayAdmiOpenen("C:\\SnelStart\\Administraties", "Voorbeeldbedrijf");
+            test.mtdGWayAdmiOpenen("D:\\SnelStart\\Administraties", "Voorbeeldbedrijf");
         }
 
         [TestMethod]
@@ -83,6 +83,14 @@ namespace Tests
             testKlant.prpEmail = "Aton@Aton.nl";
             var x = testKlant.mtdGWayKlantWrite();
             return x;
+        }
+
+        [TestMethod]
+        public void ConnectorRead_Customer()
+        {
+            var obj = Voituron_Framework.CustomerSnelStartConnector.Get(10292);
+
+            Assert.AreEqual(true, true);
         }
     }
 }
