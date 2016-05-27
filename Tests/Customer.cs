@@ -97,9 +97,8 @@ namespace Tests
         public void Get_CustomerList()
         {
             var obj = Voituron_Framework.CustomerSnelStartConnector.ListCustomersGet();
-            var x = obj.Count;
 
-            Assert.AreEqual(20, x);
+            Assert.IsNotNull(obj);
         }
     }
 }

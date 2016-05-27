@@ -8,24 +8,25 @@ namespace Voituron_Framework
 {
     public class ProductSnelStart
     {
-        public string vfArtikelcode { get; set; }
-        public string vfOmschrijving { get; set; }
-        public decimal vfVerkoopPrijs { get; set; }
-        public bool vfAutomatischePrijs { get; set; }
-        public int vfArtikelKortinggroepID { get; set; }
-        public decimal vfVoorraad { get; set; }
-        public int vfArtikelOmzetgroep { get; set; }
-        public decimal vfBestelEenheid { get; set; }
-        public string vfEenheid { get; set; }
-        public decimal vfInkoopPrijs { get; set; }
-        public int vfLeverancierID { get; set; }
-        public bool vfMaxKortingsPercentageGebruiken { get; set; }
-        public decimal vfMaxKortingsPercentage { get; set; }
-        public decimal vfMinimaalBestelAantal { get; set; }
-        public decimal vfMinimumVoorraad { get; set; }
-        public bool vfNonActief { get; set; }
-        public bool vfVoorraadControle { get; set; }
-        public decimal vfVoorraadGewenst { get; set; }
-        public decimal vfVoorraadVrij { get; set; }
+        // All properties of our framework for Products. "fp" stands for Framework Property.
+        public string fpArtikelcode { get; set; }                           // Article Code, ID of the product
+        public string fpOmschrijving { get; set; }                          // Description
+        public decimal fpVerkoopPrijs { get; set; }                         // Price
+        public bool fpAutomatischePrijs { get; set; }                       // Automatic price
+        public int fpArtikelKortinggroepID { get; set; }                    // Discount group ID
+        public decimal fpVoorraad { get; set; }                             // Warehouse
+        public int fpArtikelOmzetgroep { get; set; }                        // Article revenue group
+        public decimal fpBestelEenheid { get; set; }                        // Order unit
+        public string fpEenheid { get; set; }                               // unit
+        public decimal fpInkoopPrijs { get; set; }                          // stock acquisition
+        public int fpLeverancierID { get; set; }                            // Supplier ID
+        public bool fpMaxKortingsPercentageGebruiken { get; set; }          // boolean whether to use maximum discount percentage
+        public decimal fpMaxKortingsPercentage { get; set; }                // Set maximum discount percentage
+        public decimal fpMinimaalBestelAantal { get; set; }                 // Minimum order amount
+        public decimal fpMinimumVoorraad { get; set; }                      // Minimum warehouse
+        public bool fpNonActief { get; set; }                               // Boolean whether inactive
+        public bool fpVoorraadControle { get; set; }                        // Boolean whether Warehouse is checked
+        public decimal fpVoorraadGewenst { get; set; }                      // Desired warehouse
+        public decimal fpVoorraadVrij { get; set; }                         // Free warehouse
     }
 }

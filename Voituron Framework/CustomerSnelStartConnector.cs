@@ -59,21 +59,21 @@ namespace Voituron_Framework
             Customer.fpKredietTermijn = testCustomer.prpKrediettermijn;                                                 // Credit period
             Customer.fpKvkNummer = testCustomer.prpKvkNummer;                                                           // Chamber of Commerce number
             Customer.fpNonActiefGet = testCustomer.prpNonActiefGet;                                                     // Boolean whether customer is active/inactive "InActiveGet"
-            Customer.fpOfferteEmailen = testCustomer.prpOfferteEmailen;                                                 //
-            Customer.fpOfferteEmailAdres = testCustomer.prpOfferteEmailAdres;
-            Customer.fpOfferteCcEmailAdres = testCustomer.prpOfferteCcEmailAdres;
-            Customer.fpOpenstaandSaldo = testCustomer.prpOpenstaandSaldo;
-            Customer.fpRekeningnummerBank2 = testCustomer.prpRekeningnummerBank2;
-            Customer.fpRekeningnummerNaamHouder = testCustomer.prpRekeningnummerNaamHouder;
-            Customer.fpRekeningnummerPlaatsHouder = testCustomer.prpRekeningnummerPlaatsHouder;
-            Customer.fpRelatieCodeFactuurNaar = testCustomer.prpRelatieCodeFactuurNaar;
-            Customer.fpUblBestandAlsBijlage = testCustomer.prpUblBestandAlsBijlage;
-            Customer.fpVestigingAdres = testCustomer.prpVestigingAdres;
-            Customer.fpVestigingAdresContactPersoon = testCustomer.prpVestigingAdresContactpersoon;
-            Customer.fpVestigingAdresLandID = testCustomer.prpVestigingAdresLandID;
-            Customer.fpVestigingAdresPlaats = testCustomer.prpVestigingAdresPlaats;
-            Customer.fpVestigingAdresPostcode = testCustomer.prpVestigingAdresPostcode;
-            Customer.fpWebSiteUrl = testCustomer.prpWebSiteUrl;
+            Customer.fpOfferteEmailen = testCustomer.prpOfferteEmailen;                                                 // Boolean whether to send quotation email
+            Customer.fpOfferteEmailAdres = testCustomer.prpOfferteEmailAdres;                                           // E-mail address to send quotation to
+            Customer.fpOfferteCcEmailAdres = testCustomer.prpOfferteCcEmailAdres;                                       // CC E-mail address to send quotation to
+            Customer.fpOpenstaandSaldo = testCustomer.prpOpenstaandSaldo;                                               // Outstanding balance
+            Customer.fpRekeningnummerBank2 = testCustomer.prpRekeningnummerBank2;                                       // Bank account number
+            Customer.fpRekeningnummerNaamHouder = testCustomer.prpRekeningnummerNaamHouder;                             // Account holder name
+            Customer.fpRekeningnummerPlaatsHouder = testCustomer.prpRekeningnummerPlaatsHouder;                         // Account holder town name
+            Customer.fpRelatieCodeFactuurNaar = testCustomer.prpRelatieCodeFactuurNaar;                                 // Relation code invoice/bill to
+            Customer.fpUblBestandAlsBijlage = testCustomer.prpUblBestandAlsBijlage;                                     // Ubl File as attachment
+            Customer.fpVestigingAdres = testCustomer.prpVestigingAdres;                                                 // establishment address 
+            Customer.fpVestigingAdresContactPersoon = testCustomer.prpVestigingAdresContactpersoon;                     // Establishment address contact person
+            Customer.fpVestigingAdresLandID = testCustomer.prpVestigingAdresLandID;                                     // Establishment address country ID
+            Customer.fpVestigingAdresPlaats = testCustomer.prpVestigingAdresPlaats;                                     // Establishment address town name
+            Customer.fpVestigingAdresPostcode = testCustomer.prpVestigingAdresPostcode;                                 // Establishment address ZIP code
+            Customer.fpWebSiteUrl = testCustomer.prpWebSiteUrl;                                                         // Website URL
 
             return Customer;
         }
@@ -82,8 +82,9 @@ namespace Voituron_Framework
             Connect();
             List<CustomerSnelStart> customers = new List<CustomerSnelStart>();
             clsGWKlant customer = new clsGWKlant();
-            var x = 0;
-            while(customer.mtdGWayKlantReadNext() == true && x <= 19)
+
+            // Fill Customer List with customers while KlantReadNext() is true
+            while(customer.mtdGWayKlantReadNext() == true)
             {
                 var listCustomer = new CustomerSnelStart();
                 listCustomer.fpRelatieCode = customer.prpRelatieCode;
@@ -135,7 +136,6 @@ namespace Voituron_Framework
                 listCustomer.fpVestigingAdresPostcode = customer.prpVestigingAdresPostcode;
                 listCustomer.fpWebSiteUrl = customer.prpWebSiteUrl;
                 customers.Add(listCustomer);
-                x++;
             }
             return customers;
         }

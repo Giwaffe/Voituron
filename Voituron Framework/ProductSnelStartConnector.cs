@@ -26,25 +26,25 @@ namespace Voituron_Framework
 
             testProduct.mtdGWayArtikelRead(Id);
 
-            product.vfArtikelcode = testProduct.prpArtikelcodeGet;                          // Id of the Product
-            product.vfOmschrijving = testProduct.prpOmschrijvingGet;                        // Name of the Product
-            product.vfVerkoopPrijs = testProduct.prpVerkoopprijsGet;                        // Price of the Product
-            product.vfAutomatischePrijs = testProduct.prpAutomatischePrijsGet;
-            product.vfArtikelKortinggroepID = testProduct.prpArtikelKortinggroepIDGet;      // Discountgroup of the Product
-            product.vfMaxKortingsPercentage = testProduct.prpMaxKortingsPercentageGet;      // MaxDiscount of the Product
-            product.vfVoorraad = testProduct.prpVoorraadTechnischGet;                       // Quantity in Storage
-            product.vfArtikelOmzetgroep = testProduct.prpArtikelOmzetgroepIDGet;
-            product.vfBestelEenheid = testProduct.prpBestelEenheidGet;
-            product.vfEenheid = testProduct.prpEenheidGet;
-            product.vfInkoopPrijs = testProduct.prpInkoopprijsGet;
-            product.vfLeverancierID = testProduct.prpLeverancierIDGet;
-            product.vfMaxKortingsPercentageGebruiken = testProduct.prpMaxKortingsPercentageGebruikenGet;
-            product.vfMinimaalBestelAantal = testProduct.prpMinimaalBestelAantalGet;
-            product.vfMinimumVoorraad = testProduct.prpMinimumVoorraadGet;
-            product.vfNonActief = testProduct.prpNonActiefGet;
-            product.vfVoorraadControle = testProduct.prpVoorraadControleGet;
-            product.vfVoorraadGewenst = testProduct.prpVoorraadGewenstGet;
-            product.vfVoorraadVrij = testProduct.prpVoorraadVrijGet;
+            product.fpArtikelcode = testProduct.prpArtikelcodeGet;                                              // Id of the Product
+            product.fpOmschrijving = testProduct.prpOmschrijvingGet;                                            // Name of the Product
+            product.fpVerkoopPrijs = testProduct.prpVerkoopprijsGet;                                            // Price of the Product
+            product.fpAutomatischePrijs = testProduct.prpAutomatischePrijsGet;
+            product.fpArtikelKortinggroepID = testProduct.prpArtikelKortinggroepIDGet;                          // Discountgroup of the Product
+            product.fpMaxKortingsPercentage = testProduct.prpMaxKortingsPercentageGet;                          // MaxDiscount of the Product
+            product.fpVoorraad = testProduct.prpVoorraadTechnischGet;                                           // Quantity in Storage
+            product.fpArtikelOmzetgroep = testProduct.prpArtikelOmzetgroepIDGet;
+            product.fpBestelEenheid = testProduct.prpBestelEenheidGet;
+            product.fpEenheid = testProduct.prpEenheidGet;
+            product.fpInkoopPrijs = testProduct.prpInkoopprijsGet;
+            product.fpLeverancierID = testProduct.prpLeverancierIDGet;
+            product.fpMaxKortingsPercentageGebruiken = testProduct.prpMaxKortingsPercentageGebruikenGet;
+            product.fpMinimaalBestelAantal = testProduct.prpMinimaalBestelAantalGet;
+            product.fpMinimumVoorraad = testProduct.prpMinimumVoorraadGet;
+            product.fpNonActief = testProduct.prpNonActiefGet;
+            product.fpVoorraadControle = testProduct.prpVoorraadControleGet;
+            product.fpVoorraadGewenst = testProduct.prpVoorraadGewenstGet;
+            product.fpVoorraadVrij = testProduct.prpVoorraadVrijGet;
 
             return product;
         }
@@ -53,31 +53,30 @@ namespace Voituron_Framework
             Connect();
             List<ProductSnelStart> products = new List<ProductSnelStart>();
             clsGWArtikel product = new clsGWArtikel();
-            var x = 0;
-            while (product.mtdGWayArtikelReadNext() == true && x <= 19)
+
+            while (product.mtdGWayArtikelReadNext() == true)
             {
                 var listproduct = new ProductSnelStart();
-                listproduct.vfArtikelcode = product.prpArtikelcodeGet;                          // Id of the Product
-                listproduct.vfOmschrijving = product.prpOmschrijvingGet;                        // Name of the Product
-                listproduct.vfVerkoopPrijs = product.prpVerkoopprijsGet;                        // Price of the Product
-                listproduct.vfAutomatischePrijs = product.prpAutomatischePrijsGet;
-                listproduct.vfArtikelKortinggroepID = product.prpArtikelKortinggroepIDGet;      // Discountgroup of the Product
-                listproduct.vfMaxKortingsPercentage = product.prpMaxKortingsPercentageGet;      // MaxDiscount of the Product
-                listproduct.vfVoorraad = product.prpVoorraadTechnischGet;                       // Quantity in Storage
-                listproduct.vfArtikelOmzetgroep = product.prpArtikelOmzetgroepIDGet;
-                listproduct.vfBestelEenheid = product.prpBestelEenheidGet;
-                listproduct.vfEenheid = product.prpEenheidGet;
-                listproduct.vfInkoopPrijs = product.prpInkoopprijsGet;
-                listproduct.vfLeverancierID = product.prpLeverancierIDGet;
-                listproduct.vfMaxKortingsPercentageGebruiken = product.prpMaxKortingsPercentageGebruikenGet;
-                listproduct.vfMinimaalBestelAantal = product.prpMinimaalBestelAantalGet;
-                listproduct.vfMinimumVoorraad = product.prpMinimumVoorraadGet;
-                listproduct.vfNonActief = product.prpNonActiefGet;
-                listproduct.vfVoorraadControle = product.prpVoorraadControleGet;
-                listproduct.vfVoorraadGewenst = product.prpVoorraadGewenstGet;
-                listproduct.vfVoorraadVrij = product.prpVoorraadVrijGet;
+                listproduct.fpArtikelcode = product.prpArtikelcodeGet;                          // Id of the Product
+                listproduct.fpOmschrijving = product.prpOmschrijvingGet;                        // Name of the Product
+                listproduct.fpVerkoopPrijs = product.prpVerkoopprijsGet;                        // Price of the Product
+                listproduct.fpAutomatischePrijs = product.prpAutomatischePrijsGet;
+                listproduct.fpArtikelKortinggroepID = product.prpArtikelKortinggroepIDGet;      // Discountgroup of the Product
+                listproduct.fpMaxKortingsPercentage = product.prpMaxKortingsPercentageGet;      // MaxDiscount of the Product
+                listproduct.fpVoorraad = product.prpVoorraadTechnischGet;                       // Quantity in Storage
+                listproduct.fpArtikelOmzetgroep = product.prpArtikelOmzetgroepIDGet;
+                listproduct.fpBestelEenheid = product.prpBestelEenheidGet;
+                listproduct.fpEenheid = product.prpEenheidGet;
+                listproduct.fpInkoopPrijs = product.prpInkoopprijsGet;
+                listproduct.fpLeverancierID = product.prpLeverancierIDGet;
+                listproduct.fpMaxKortingsPercentageGebruiken = product.prpMaxKortingsPercentageGebruikenGet;
+                listproduct.fpMinimaalBestelAantal = product.prpMinimaalBestelAantalGet;
+                listproduct.fpMinimumVoorraad = product.prpMinimumVoorraadGet;
+                listproduct.fpNonActief = product.prpNonActiefGet;
+                listproduct.fpVoorraadControle = product.prpVoorraadControleGet;
+                listproduct.fpVoorraadGewenst = product.prpVoorraadGewenstGet;
+                listproduct.fpVoorraadVrij = product.prpVoorraadVrijGet;
                 products.Add(listproduct);
-                x++;
             }
             return products;
         }
