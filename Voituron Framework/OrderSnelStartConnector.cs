@@ -24,6 +24,17 @@ namespace Voituron_Framework
         public static OrderSnelStart Post()
         {
             var order = new OrderSnelStart();
+            var voituronpropertyInt = 0;
+            var voituronpropertyStr = "";
+
+            order.fpAantalInkoopLet = voituronpropertyInt;
+            order.fpAantalVerkochtLet = voituronpropertyInt;
+            order.fpArtikelCodeLet = voituronpropertyStr;
+            order.fpExtraDataSet = voituronpropertyInt;
+            order.fpKortingLet = voituronpropertyInt;
+            order.fpKostenPlaatsNummerLet = voituronpropertyInt;
+            order.fpOmschrijvingLet = voituronpropertyStr;
+            order.fpPrijsLet = voituronpropertyInt;
 
             return order;
         }
