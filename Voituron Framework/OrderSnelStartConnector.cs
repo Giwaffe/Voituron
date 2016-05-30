@@ -21,20 +21,27 @@ namespace Voituron_Framework
             return order;
         }
 
-        public static OrderSnelStart Post()
+        public static OrderSnelStart Create_Order()
         {
+            var snelstart = new clsGWaySnelStart();
             var order = new OrderSnelStart();
-            var voituronpropertyInt = 0;
+            var voituronpropertyInt = 10292;
             var voituronpropertyStr = "";
 
-            order.fpAantalInkoopLet = voituronpropertyInt;
-            order.fpAantalVerkochtLet = voituronpropertyInt;
-            order.fpArtikelCodeLet = voituronpropertyStr;
-            order.fpExtraDataSet = voituronpropertyInt;
-            order.fpKortingLet = voituronpropertyInt;
-            order.fpKostenPlaatsNummerLet = voituronpropertyInt;
-            order.fpOmschrijvingLet = voituronpropertyStr;
-            order.fpPrijsLet = voituronpropertyInt;
+            order.fpRelatieCode = voituronpropertyInt;
+            order.fpAantalInkoop = voituronpropertyInt;
+            order.fpAantalVerkocht = voituronpropertyInt;
+            order.fpArtikelCode = voituronpropertyStr;
+            order.fpExtraData = voituronpropertyInt;
+            order.fpKorting = voituronpropertyInt;
+            order.fpKostenPlaatsNummer = voituronpropertyInt;
+            order.fpOmschrijving = voituronpropertyStr;
+            order.fpPrijs = voituronpropertyInt;
+
+            //snelstart.mtdGWayVerkoopOrderAanmakenA(1, order.fpRelatieCode, DateTime.Today, order.fpOmschrijving);
+            snelstart.mtdGWayVerkoopOrderAanmakenA(1,10292, DateTime.Today, "");
+            snelstart.mtdGWayVerkoopOrderRegelToevoegenArtikelA(order.fpArtikelCode, order.fpAantalVerkocht);
+            snelstart.mtdGWayVerkoopOrderSluiten();
 
             return order;
         }

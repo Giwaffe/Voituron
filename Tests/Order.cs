@@ -56,5 +56,12 @@ namespace Tests
 
             return x;
         }
+        [TestMethod]
+        public void Create_Order()
+        {
+            Connect();
+            var obj = Voituron_Framework.OrderSnelStartConnector.Create_Order();
+            Assert.IsNotNull(obj);
+        }
     }
 }
