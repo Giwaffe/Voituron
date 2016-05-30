@@ -25,8 +25,8 @@ namespace Voituron_Framework
         {
             var snelstart = new clsGWaySnelStart();
             var order = new OrderSnelStart();
-            var voituronpropertyInt = 10292;
-            var voituronpropertyStr = "";
+            var voituronpropertyInt = 5;
+            var voituronpropertyStr = "15";
 
             order.fpRelatieCode = voituronpropertyInt;
             order.fpAantalInkoop = voituronpropertyInt;
