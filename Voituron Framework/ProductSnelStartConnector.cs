@@ -14,7 +14,7 @@ namespace Voituron_Framework
             clsGWaySnelStart test = new clsGWaySnelStart();
             test.Login("jan@e-force.nl", "E-F@ict16!", true);
             //test.mtdGWayAdmiOpenen("D:\\SnelStart\\Administraties", "Voorbeeldbedrijf");
-            test.mtdGWayAdmiOpenen("D:\\SnelStart\\Administraties", "Voituron Handelsonderneming & Technische Groothandel - KOPIE");
+            test.mtdGWayAdmiOpenen("C:\\SnelStart\\Administraties", "Voituron Handelsonderneming");
         }
 
         public static ProductSnelStart Get(string Id)
@@ -59,24 +59,24 @@ namespace Voituron_Framework
             {
                 var listproduct = new ProductSnelStart();
                 listproduct.fpArtikelcode = product.prpArtikelcodeGet;                          // Id of the Product
-                listproduct.fpOmschrijving = product.prpOmschrijvingGet;                        // Name of the Product
-                listproduct.fpVerkoopPrijs = product.prpVerkoopprijsGet;                        // Price of the Product
-                listproduct.fpAutomatischePrijs = product.prpAutomatischePrijsGet;
-                listproduct.fpArtikelKortinggroepID = product.prpArtikelKortinggroepIDGet;      // Discountgroup of the Product
-                listproduct.fpMaxKortingsPercentage = product.prpMaxKortingsPercentageGet;      // MaxDiscount of the Product
-                listproduct.fpVoorraad = product.prpVoorraadTechnischGet;                       // Quantity in Storage
-                listproduct.fpArtikelOmzetgroep = product.prpArtikelOmzetgroepIDGet;
-                listproduct.fpBestelEenheid = product.prpBestelEenheidGet;
-                listproduct.fpEenheid = product.prpEenheidGet;
-                listproduct.fpInkoopPrijs = product.prpInkoopprijsGet;
-                listproduct.fpLeverancierID = product.prpLeverancierIDGet;
-                listproduct.fpMaxKortingsPercentageGebruiken = product.prpMaxKortingsPercentageGebruikenGet;
-                listproduct.fpMinimaalBestelAantal = product.prpMinimaalBestelAantalGet;
-                listproduct.fpMinimumVoorraad = product.prpMinimumVoorraadGet;
-                listproduct.fpNonActief = product.prpNonActiefGet;
-                listproduct.fpVoorraadControle = product.prpVoorraadControleGet;
-                listproduct.fpVoorraadGewenst = product.prpVoorraadGewenstGet;
-                listproduct.fpVoorraadVrij = product.prpVoorraadVrijGet;
+                //listproduct.fpOmschrijving = product.prpOmschrijvingGet;                        // Name of the Product
+                //listproduct.fpVerkoopPrijs = product.prpVerkoopprijsGet;                        // Price of the Product
+                //listproduct.fpAutomatischePrijs = product.prpAutomatischePrijsGet;
+                //listproduct.fpArtikelKortinggroepID = product.prpArtikelKortinggroepIDGet;      // Discountgroup of the Product
+                //listproduct.fpMaxKortingsPercentage = product.prpMaxKortingsPercentageGet;      // MaxDiscount of the Product
+                //listproduct.fpVoorraad = product.prpVoorraadTechnischGet;                       // Quantity in Storage
+                //listproduct.fpArtikelOmzetgroep = product.prpArtikelOmzetgroepIDGet;
+                //listproduct.fpBestelEenheid = product.prpBestelEenheidGet;
+                //listproduct.fpEenheid = product.prpEenheidGet;
+                //listproduct.fpInkoopPrijs = product.prpInkoopprijsGet;
+                //listproduct.fpLeverancierID = product.prpLeverancierIDGet;
+                //listproduct.fpMaxKortingsPercentageGebruiken = product.prpMaxKortingsPercentageGebruikenGet;
+                //listproduct.fpMinimaalBestelAantal = product.prpMinimaalBestelAantalGet;
+                //listproduct.fpMinimumVoorraad = product.prpMinimumVoorraadGet;
+                //listproduct.fpNonActief = product.prpNonActiefGet;
+                //listproduct.fpVoorraadControle = product.prpVoorraadControleGet;
+                //listproduct.fpVoorraadGewenst = product.prpVoorraadGewenstGet;
+                //listproduct.fpVoorraadVrij = product.prpVoorraadVrijGet;
                 products.Add(listproduct);
             }
             return products;
