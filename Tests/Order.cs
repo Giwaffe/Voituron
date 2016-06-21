@@ -14,6 +14,7 @@ namespace Tests
             clsGWaySnelStart test = new clsGWaySnelStart();
             test.Login("jan@e-force.nl", "E-F@ict16!", true);
             test.mtdGWayAdmiOpenen("D:\\SnelStart\\Administraties", "Voituron Handelsonderneming");
+            //C:\Program Files\Microsoft SQL Server\MSSQL11.SQLEXPRESS\MSSQL\DATA\VoituronMasterTest.mdf
         }
 
         [TestMethod]

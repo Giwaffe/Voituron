@@ -9,6 +9,8 @@ namespace ConsoleApplication6
 {
     class Program
     {    
+        public void Connect() { 
+}
         static void Main(string[] args)
         {
             clsGWaySnelStart test = new clsGWaySnelStart();
@@ -16,16 +18,16 @@ namespace ConsoleApplication6
             clsGWayLoginSettings testLogin = new clsGWayLoginSettings();
 
             test.Login("jan@e-force.nl", "E-F@ict16!", true);
-            test.mtdGWayAdmiOpenen("C:\\SnelStart\\Administraties", "Voituron Handelsonderneming en Technische Groothandel");
+            test.mtdGWayAdmiOpenen("D:\\SnelStart\\Administraties", "Voorbeeldbedrijf");
 
-            testProduct.mtdGWayArtikelRead("10030");
+            
 
             //StaffelKorting
-            
-            Console.WriteLine(testProduct.mtdGWayVerkoopprijsGet(10292, 1, DateTime.Now));
-            Console.WriteLine(testProduct.mtdGWayVerkoopprijsGet(10292, 5, DateTime.Now));
-            Console.WriteLine(testProduct.mtdGWayVerkoopprijsGet(10292, 8, DateTime.Now));
-            Console.WriteLine(testProduct.mtdGWayVerkoopprijsGet(10292, 10, DateTime.Now));
+
+            //Console.WriteLine(testProduct.mtdGWayVerkoopprijsGet(10292, 1, DateTime.Now));
+            //Console.WriteLine(testProduct.mtdGWayVerkoopprijsGet(10292, 5, DateTime.Now));
+            //Console.WriteLine(testProduct.mtdGWayVerkoopprijsGet(10292, 8, DateTime.Now));
+            //Console.WriteLine(testProduct.mtdGWayVerkoopprijsGet(10292, 10, DateTime.Now));
 
 
 
@@ -115,8 +117,40 @@ namespace ConsoleApplication6
             //testProduct.mtdGWayArtikelRead("10031");
             //var j = testProduct.prpOmschrijvingGet;
             //Console.WriteLine("Omschrijving: " + a);
-            Console.ReadKey();
+            while (1 == 1)
+            {
+                var key = Console.ReadKey().KeyChar;
+                //var key = rk.KeyChar;
+                if (key.Equals('s'))
+                {
+                    Console.WriteLine("taffelkortingen berekenen");
+                    Console.WriteLine("-------------------------------------");
+                    Console.WriteLine("Artikel ophalen");
+                    testProduct.mtdGWayArtikelRead(Console.ReadLine());
+                    //testProduct.mtdGWayArtikelRead("10033"); //Hoofdschakelaar
+                    Console.WriteLine(testProduct.prpArtikelcodeGet + "De opgehaalde artikelcode");
+                    Console.WriteLine(testProduct.prpOmschrijvingGet);
+                    Console.WriteLine(testProduct.mtdGWayVerkoopprijsGet(10292, 1, DateTime.Now) + "Prijs bij bestelling van 1 artikel.");
+                    Console.WriteLine(testProduct.mtdGWayVerkoopprijsGet(10292, 5, DateTime.Now) + "Prijs bij bestelling van 5 artikelen.");
+                    Console.WriteLine(testProduct.mtdGWayVerkoopprijsGet(10292, 10, DateTime.Now) + "Prijs bij bestelling van 10 artikelen.");
+                }
+                if (key.Equals('o'))
+                {
+                    Console.WriteLine("rder inschieten");
+                    test.mtdGWayVerkoopOrderAanmakenA(1, 10292, DateTime.Today, "Test order maken");
+                    test.mtdGWayVerkoopOrderRegelToevoegenTekst("Tekstregel");
+                    test.mtdGWayVerkoopOrderRegelToevoegenArtikelA("10033", 3);
+                    var x = test.mtdGWayVerkoopOrderSluitenGet();
+                    Console.WriteLine(x);
+                    Console.WriteLine("Open SnelStart en zoek de bovenstaande order ID");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                }
+                Console.WriteLine("");
+                Console.WriteLine("Waiting for input...");
+            }
         }
+
     }
 }
 
